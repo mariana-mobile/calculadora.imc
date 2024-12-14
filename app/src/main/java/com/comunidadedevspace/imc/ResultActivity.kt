@@ -1,5 +1,7 @@
 package com.comunidadedevspace.imc
 
+import android.annotation.SuppressLint
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -11,6 +13,7 @@ const val KEY_RESULT_IMC = "ResultActivity.KEY_IMC"
 
 class ResultActivity : AppCompatActivity() {
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
@@ -19,20 +22,25 @@ class ResultActivity : AppCompatActivity() {
 
         val tvResult = findViewById<TextView>(R.id.tv_result)
         val tvClassificacao = findViewById<TextView>(R.id.tv_classificacao)
+
         tvResult.text = result.toString()
 
-        val classificacao: String = if(result <= 18.5f){
-            "MAGREZA"
-        }else if(result > 18.5f && result <= 24.9f){
-            "NORMAL"
-        }else if(result > 25f && result <= 29.9f) {
-            "SOBREPESO"
-        }else if(result > 30f && result <= 39.9f) {
-            "OBESIDADE"
-        }else {
-            "OBESIDADE GRAVE"
+        val classificacao: String = when {
+            result <= 18.5f -> "MAGREZA"
+            result <= 24.9f -> "NORMAL"
+            result <= 29.9f -> "SOBREPESO"
+            result <= 39.9f -> "OBESIDADE"
+            else -> "OBESIDADE GRAVE"
         }
+        val classificacaoCores = mapOf(
+            "MAGREZA" to "#FF0000",
+            "NORMAL" to "#008000",
+            "SOBREPESO" to "#FFFF00",
+            "OBESIDADE" to "#FFA500",
+            "OBESIDADE GRAVE" to "#FF0000"
+        )
 
         tvClassificacao.text = classificacao
+        tvClassificacao.setTextColor(Color.parseColor(classificacaoCores[classificacao] ?: "#FFFFFF"))
     }
 }
