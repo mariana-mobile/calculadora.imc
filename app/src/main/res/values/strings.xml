@@ -3,4 +3,5 @@
     <string name="button2">Calcular</string>
     <string name="digite_seu_peso_ex_70_350">Digite seu peso: Ex 70.350</string>
     <string name="digite_sua_altura_ex_1_65">Digite sua altura: Ex: 1.65</string>
+    <string name="a_classifica_o_do_seu_imc">A classificação do seu IMC é:</string>
 </resources>
