@@ -10,7 +10,7 @@ android {
     defaultConfig {
         applicationId = "com.comunidadedevspace.imc"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -33,6 +33,14 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = false
+    }
+    dependenciesInfo {
+        includeInApk = false
+        includeInBundle = false
+    }
+    buildToolsVersion = "33.0.1"
 }
 
 dependencies {
