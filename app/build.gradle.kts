@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.comunidadedevspace.imc"
-    compileSdk = 34
+    compileSdk = 33
 
     defaultConfig {
         applicationId = "com.comunidadedevspace.imc"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
@@ -40,7 +40,6 @@ android {
         includeInApk = false
         includeInBundle = false
     }
-    buildToolsVersion = "33.0.1"
 }
 dependencies {
 
