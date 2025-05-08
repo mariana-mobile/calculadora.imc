@@ -1,14 +1,24 @@
 # Calculadora IMC
-Este projeto é um aplicativo nativo desenvolvido com a linguagem de programação Kotlin. O principal objetivo deste projeto foi de criar um aplicativo para realizar o cálculo do IMC do usuário na primeira tela e mostrar o resultado na tela seguinte.
+Projeto de aplicativo Android nativo escrito em **Kotlin**. O objetivo principal é realizar o **cálculo do IMC** do usuário. O aplicativo apresenta a **entrada de dados** em uma tela inicial e exibe o **resultado** com um **feedback contextualizado** de acordo com a **classificação do IMC** em uma segunda tela.
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
-<img src="https://github.com/user-attachments/assets/b19d738b-4d84-4d9d-82c8-460be1fb5c1c" width=200/><image src="https://github.com/user-attachments/assets/75f28734-5522-4797-9f80-bc68fe299be0" width=200/>
+<img src="https://github.com/user-attachments/assets/4970d208-5b43-4b65-a927-9b51788c256a" width=200/>
+
+<img src="https://github.com/user-attachments/assets/10f7f26e-b1ec-4f35-9870-a73aa13f3467" width=200/>
+
+<img src="https://github.com/user-attachments/assets/fa789eac-86db-4cb9-81a6-adbdc108468c" width=200/>
+
+<img src="https://github.com/user-attachments/assets/bf1ce412-6612-4a36-a0d4-4cb2ca991a73" width=200/>
+
+<img src="https://github.com/user-attachments/assets/aa93d4c7-c85c-47c9-b58d-a48f6e822b89" width=200/>
 
 ## Tecnologias
 - Activity
 - Intent
 - Snackbar
+- Kotlin
+- XML
 - ViewGroups
   - LinearLayout
   - ConstraintLayout
