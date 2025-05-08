@@ -3,6 +3,10 @@ Projeto de aplicativo Android nativo escrito em **Kotlin**. O objetivo principal
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
+
+<img src="https://github.com/user-attachments/assets/22d7f230-5678-4019-a566-6a397ad8be3c" width=200/>
+<img src="https://github.com/user-attachments/assets/1139dd4c-17d7-430f-b94e-1be1c7789b4b" width=200/>
+
 <img src="https://github.com/user-attachments/assets/4970d208-5b43-4b65-a927-9b51788c256a" width=200/>
 
 <img src="https://github.com/user-attachments/assets/10f7f26e-b1ec-4f35-9870-a73aa13f3467" width=200/>
