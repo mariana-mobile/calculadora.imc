@@ -13,3 +13,13 @@
 .externalNativeBuild
 .cxx
 local.properties
+*.log
+*.tmp
+/out/
+*.jar
+*.war
+*.aar
+*.apk
+hs_err_pid*
+Thumbs.db
+/docs/_build/
