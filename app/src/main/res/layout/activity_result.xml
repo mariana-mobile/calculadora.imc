@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
     tools:context=".ResultActivity">
 
     <LinearLayout
         android:id="@+id/vg_header"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:background="@drawable/gradient_bg"
@@ -27,24 +25,28 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
             android:src="@drawable/ic_weight"
-            app:tint="@color/white" />
+            app:tint="@color/textColorPrimary"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:text="Calculadora IMC"
-            android:textColor="@color/white"
-            android:textSize="24dp" />
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/calculadora_imc"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="24sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="22dp"
             android:layout_marginEnd="22dp"
-            android:text="=Confirme abaixo o resultado do seu IMC e a classificação:"
-            android:textColor="@color/white" />
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/validacao_do_resultado"
+            android:textColor="@color/textColorPrimary" />
 
         <TextView
             android:id="@+id/tv_result"
@@ -54,7 +56,7 @@
             android:layout_marginBottom="36dp"
             android:gravity="center"
             android:maxLength="5"
-            android:textColor="@color/white"
+            android:textColor="@color/textColorPrimary"
             android:textSize="64sp"
             android:textStyle="bold"
             tools:text="23.66" />
@@ -65,15 +67,48 @@
         android:id="@+id/tv_classificacao_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:text="@string/a_classifica_o_do_seu_imc" />
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/a_classifica_o_do_seu_imc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vg_header" />
 
     <TextView
         android:id="@+id/tv_classificacao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="sans-serif-medium"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_classificacao_label"
         tools:text="Normal" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/tv_mensagem_cuidado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textSize="14sp"
+        android:textColor="@color/textColorSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_classificacao" />
+
+    <Button
+        android:id="@+id/btn_voltar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="@string/voltar_tela_inicial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
